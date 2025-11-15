@@ -13,16 +13,21 @@
       <Platform Solution="*|x64" Project="x64" />
       <Platform Solution="*|x86" Project="x86" />
     </Project>
+    <Project Path="src/ProtonDrive.App.Linux/ProtonDrive.App.Linux.csproj">
+      <Platform Solution="*|x64" Project="x64" />
+    </Project>
     <Project Path="src/ProtonDrive.App/ProtonDrive.App.csproj" />
     <Project Path="src/ProtonDrive.Client/ProtonDrive.Client.csproj" />
     <Project Path="src/ProtonDrive.DataAccess/ProtonDrive.DataAccess.csproj" />
     <Project Path="src/ProtonDrive.Native.Windows/ProtonDrive.Native.Windows.csproj" />
+    <Project Path="src/ProtonDrive.Native.Linux/ProtonDrive.Native.Linux.csproj" />
     <Project Path="src/ProtonDrive.Shared/ProtonDrive.Shared.csproj" />
     <Project Path="src/ProtonDrive.Sync.Adapter/ProtonDrive.Sync.Adapter.csproj" />
     <Project Path="src/ProtonDrive.Sync.Agent/ProtonDrive.Sync.Agent.csproj" />
     <Project Path="src/ProtonDrive.Sync.Engine/ProtonDrive.Sync.Engine.csproj" />
     <Project Path="src/ProtonDrive.Sync.Shared/ProtonDrive.Sync.Shared.csproj" />
     <Project Path="src/ProtonDrive.Sync.Windows/ProtonDrive.Sync.Windows.csproj" />
+    <Project Path="src/ProtonDrive.Sync.Linux/ProtonDrive.Sync.Linux.csproj" />
     <Project Path="src/ProtonDrive.Update/ProtonDrive.Update.csproj" />
   </Folder>
   <Folder Name="/Configuration/">

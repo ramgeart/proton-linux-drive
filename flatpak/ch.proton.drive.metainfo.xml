@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>ch.proton.drive</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Proton Drive</name>
+  <summary>Secure cloud storage from Proton</summary>
+  <description>
+    <p>
+      Proton Drive is a secure cloud storage service that provides end-to-end
+      encrypted file storage and synchronization. This is a Linux port of the
+      Windows application.
+    </p>
+    <p>
+      Features include:
+    </p>
+    <ul>
+      <li>End-to-end encryption for all your files</li>
+      <li>Automatic file synchronization</li>
+      <li>File sharing capabilities</li>
+      <li>Cross-platform compatibility</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">ch.proton.drive.desktop</launchable>
+  <url type="homepage">https://proton.me/drive</url>
+  <url type="bugtracker">https://github.com/ramgeart/proton-linux-drive/issues</url>
+  <developer_name>Proton AG</developer_name>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.12.0" date="2024-01-15">
+      <description>
+        <p>Initial Linux port of Proton Drive</p>
+      </description>
+    </release>
+  </releases>
+</component>

@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ProtonDrive.App.Linux.MainWindow"
+        Title="Proton Drive"
+        Width="800"
+        Height="600">
+    <StackPanel Margin="20">
+        <TextBlock FontSize="24" FontWeight="Bold" Margin="0,0,0,20">
+            Proton Drive for Linux
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap">
+            Welcome to Proton Drive for Linux! This is a port of the Windows version to Linux using Avalonia UI.
+        </TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="0,10,0,0">
+            This application provides secure cloud storage synchronized to your computer.
+        </TextBlock>
+    </StackPanel>
+</Window>

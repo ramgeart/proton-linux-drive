@@ -167,6 +167,14 @@ DocProject/Help/html
 # Click-Once directory
 publish/
 
+# Flatpak build directory
+build-dir/
+.flatpak-builder/
+*.flatpak
+
+# Linux-specific build artifacts
+*.zip
+
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
