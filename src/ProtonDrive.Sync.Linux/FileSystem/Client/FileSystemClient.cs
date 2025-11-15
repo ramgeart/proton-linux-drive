@@ -58,7 +58,7 @@ public static class FileSystemClient
         {
             return false;
         }
-        catch
+        catch (IOException)
         {
             // If it's a directory, try a different approach
             if (Directory.Exists(path))
@@ -70,7 +70,11 @@ public static class FileSystemClient
                     File.Delete(testFile);
                     return true;
                 }
-                catch
+                catch (UnauthorizedAccessException)
+                {
+                    return false;
+                }
+                catch (IOException)
                 {
                     return false;
                 }
@@ -100,7 +104,19 @@ public static class FileSystemClient
         {
             return GetInode(path1) == GetInode(path2);
         }
-        catch
+        catch (FileNotFoundException)
+        {
+            return false;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return false;
+        }
+        catch (ArgumentException)
+        {
+            return false;
+        }
+        catch (IOException)
         {
             return false;
         }

@@ -10,7 +10,9 @@ finish-args:
   - --socket=x11
   - --socket=wayland
   - --device=dri
-  - --filesystem=home
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=~/ProtonDrive:create
   - --share=network
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.secrets

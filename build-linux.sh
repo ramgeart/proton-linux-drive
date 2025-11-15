@@ -26,12 +26,19 @@ fi
 
 DOTNET_VERSION=$(dotnet --version)
 echo "Found .NET SDK version: $DOTNET_VERSION"
+
+# Extract major version and check minimum required version
+MAJOR_VERSION=$(echo "$DOTNET_VERSION" | cut -d'.' -f1)
+if [ "$MAJOR_VERSION" -lt 9 ]; then
+    echo "ERROR: .NET SDK 9.0 or later is required. Found version: $DOTNET_VERSION"
+    exit 1
+fi
 echo ""
 
 # Clean previous builds
 echo "Cleaning previous builds..."
 rm -rf "$OUTPUT_DIR"
-dotnet clean src/ProtonDrive.App.Linux/ProtonDrive.App.Linux.csproj --configuration "$BUILD_CONFIG" > /dev/null 2>&1 || true
+dotnet clean src/ProtonDrive.App.Linux/ProtonDrive.App.Linux.csproj --configuration "$BUILD_CONFIG" || echo "Warning: Clean failed, continuing anyway..."
 echo ""
 
 # Restore dependencies

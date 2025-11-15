@@ -27,7 +27,7 @@
   <developer_name>Proton AG</developer_name>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.12.0" date="2025-11-15">
+    <release version="1.12.0" date="2024-01-15">
       <description>
         <p>Initial Linux port of Proton Drive</p>
       </description>

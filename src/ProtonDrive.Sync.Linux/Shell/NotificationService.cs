@@ -24,7 +24,7 @@ public class NotificationService
                 _ => "normal"
             };
 
-            var process = new Process
+            using var process = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
@@ -40,11 +40,12 @@ public class NotificationService
             process.Start();
             await process.WaitForExitAsync();
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             // Fallback: log to console if notification fails
             Console.WriteLine($"[{priority}] {title}: {message}");
-            Console.WriteLine($"Notification error: {ex.Message}");
+            Console.WriteLine($"Notification error: Failed to send notification");
+            // Full exception details should be logged to a secure log file in production
         }
     }
 }

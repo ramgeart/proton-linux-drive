@@ -109,7 +109,7 @@ public class DataProtectionProvider : IDataProtectionProvider
         using var pbkdf2 = new Rfc2898DeriveBytes(
             Encoding.UTF8.GetBytes(keySource),
             Salt,
-            10000,
+            210000, // OWASP recommended minimum for PBKDF2-HMAC-SHA256
             HashAlgorithmName.SHA256);
 
         return pbkdf2.GetBytes(32); // 256-bit key
@@ -125,9 +125,10 @@ public class DataProtectionProvider : IDataProtectionProvider
                 return File.ReadAllText("/etc/machine-id").Trim();
             }
         }
-        catch
+        catch (Exception ex)
         {
-            // Fall back to hostname
+            // Log the exception before falling back
+            Console.WriteLine($"Warning: Failed to read /etc/machine-id: {ex.Message}");
         }
 
         return Environment.MachineName;
