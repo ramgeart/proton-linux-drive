@@ -64,6 +64,63 @@ flatpak run ch.proton.drive
 
 **Note:** The build requires access to proprietary Proton packages (`Proton.Cryptography` and `Proton.Drive.Sdk`). 
 These packages are not publicly available and must be obtained from Proton AG or configured in a private NuGet feed.
+See [PROPRIETARY_DEPENDENCIES.md](PROPRIETARY_DEPENDENCIES.md) for details.
+
+## Documentation
+
+- **[LINUX.md](LINUX.md)** - Comprehensive Linux port documentation
+- **[DEVELOPMENT.md](DEVELOPMENT.md)** - Developer guide and environment setup
+- **[PROPRIETARY_DEPENDENCIES.md](PROPRIETARY_DEPENDENCIES.md)** - Handling proprietary packages
+- **[CICD.md](CICD.md)** - CI/CD pipeline documentation
+
+## Platform Support
+
+### Windows
+The original Windows version uses:
+- WPF for UI
+- Windows-specific APIs for file system operations
+- Windows DPAPI for credential storage
+
+### Linux (NEW)
+The Linux port uses:
+- Avalonia UI for cross-platform XAML
+- POSIX file system APIs
+- AES encryption (with planned Keyring integration)
+- D-Bus for desktop integration
+
+## Quick Start
+
+### Using Pre-built Releases
+
+**Linux:**
+```bash
+# Download from releases page
+wget https://github.com/ramgeart/proton-linux-drive/releases/latest/download/ProtonDrive-linux-x64.zip
+
+# Extract and run
+unzip ProtonDrive-linux-x64.zip -d ~/ProtonDrive
+cd ~/ProtonDrive
+chmod +x ProtonDrive
+./ProtonDrive
+```
+
+**Flatpak:**
+```bash
+# Install
+flatpak install ProtonDrive.flatpak
+
+# Run
+flatpak run ch.proton.drive
+```
+
+### Building from Source
+
+**Quick build script (Linux):**
+```bash
+./build-linux.sh
+```
+
+See [DEVELOPMENT.md](DEVELOPMENT.md) for detailed build instructions.
 
 ## Contributions
 
