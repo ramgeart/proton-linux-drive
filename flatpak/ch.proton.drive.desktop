@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Proton Drive
+GenericName=Cloud Storage
+Comment=Secure cloud storage from Proton
+Icon=ch.proton.drive
+Exec=ProtonDrive
+Terminal=false
+Categories=Network;FileTransfer;
+Keywords=cloud;storage;sync;proton;
+StartupWMClass=ProtonDrive

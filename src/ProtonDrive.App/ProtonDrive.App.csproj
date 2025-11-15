@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>$(DefaultTargetFramework)-windows</TargetFramework>
+    <TargetFrameworks>$(DefaultTargetFramework)-windows;$(DefaultTargetFramework)</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
